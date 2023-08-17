@@ -9,6 +9,15 @@ public class Alice {
         System.out.println("What word would you like to search for?  ");
         String word = input.next();
         Boolean containsWord = sentence.toLowerCase().contains(word.toLowerCase());
+        Integer wordIndex = sentence.indexOf(word);
+        Integer wordLength = word.length();
+        String[] newSentenceArray = sentence.split(word);
+        String newSentence = newSentenceArray[0].concat(newSentenceArray[1]);
         System.out.println(containsWord);
+        System.out.println(wordIndex);
+        System.out.println(wordLength);
+        System.out.println(newSentence);
     }
 }
+
+// Next, remove the word from the string and print the sentence again to confirm your code. Remember that strings are immutable, so you will need to reassign the old sentence variable or create a new one to store the updated phrase.
