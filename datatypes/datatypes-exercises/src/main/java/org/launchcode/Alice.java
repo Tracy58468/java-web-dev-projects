@@ -8,9 +8,9 @@ public class Alice {
         Scanner input = new Scanner(System.in);
         System.out.println("What word would you like to search for?  ");
         String word = input.next();
-        Boolean containsWord = sentence.toLowerCase().contains(word.toLowerCase());
-        Integer wordIndex = sentence.indexOf(word);
-        Integer wordLength = word.length();
+        boolean containsWord = sentence.toLowerCase().contains(word.toLowerCase());
+        int wordIndex = sentence.indexOf(word);
+        int wordLength = word.length();
         String[] newSentenceArray = sentence.split(word);
         String newSentence = newSentenceArray[0].concat(newSentenceArray[1]);
         System.out.println(containsWord);
