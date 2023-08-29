@@ -1,31 +1,26 @@
 package org.launchcode;
 
+import java.util.Date;
+
 public class MenuItem {
-    private double price;
-    private String description;
+
+    private Date dateAdded;
+    private String name;
     private String category;
-    private boolean isNew;
+    private String description;
+    private double price;
+    private Boolean isNew = true;
 
-    public MenuItem(double p, String d, String c, boolean iN) {
-        this.price = p;
-        this.description = d;
-        this.category = c;
-        this.isNew = iN;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setCategory(String category) {
+    public MenuItem(Date dateAdded, String name, String category, String description, double price, Boolean isNew) {
+        this.dateAdded = dateAdded;
+        this.name = name;
         this.category = category;
+        this.description = description;
+        this.price = price;
+        this.isNew = isNew;
     }
 
-    public void setNew(boolean aNew) {
-        isNew = aNew;
+    public MenuItem(Date dateAdded, String name, String category) {
+        this(dateAdded, name, category, null, null, true);
     }
 }
